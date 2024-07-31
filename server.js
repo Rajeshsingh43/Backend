@@ -63,8 +63,10 @@ const colors=require("colors");
 const dotenv=require("dotenv");
 const morgan=require("morgan");
 const userdata=require("./utility/userdata.json")
+const fileURLtoPath=require("url");
+const path = require("path");
 const app=express();
-const PORT=3000;
+const PORT=5000;
 //properties of express has been transfered into app
 app.use(express.json());
 
@@ -87,7 +89,6 @@ app.get("/contact",(req,res)=>{
 app.listen(PORT,()=>{
     console.log(`server is running on port ${PORT}`)
 })
-
 
 
 
